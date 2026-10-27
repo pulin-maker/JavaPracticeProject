@@ -1,0 +1,13 @@
+# 编译产物
+target/
+*.class
+
+# IDE 配置
+.idea/
+*.iml
+.vscode/
+.codebuddy/
+
+# 日志与临时文件
+logs/
+*.log
