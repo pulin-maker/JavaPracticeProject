@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 控制台输出器：决定日志"写到哪"和"长什么样" -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- %d 时间  %level 级别  %logger{36} 类名(最长36字符)  %msg 内容  %n 换行 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 根日志器：全局默认级别为 INFO（低于 INFO 的 debug/trace 不输出） -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- 单独给某个包调级别：练习时放开 debug 看效果 -->
+    <logger name="com.nanjiabawa.oop.logging" level="DEBUG"/>
+</configuration>
